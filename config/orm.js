@@ -5,7 +5,7 @@ var orm = {
 	selectAll: function(table, cb) {
 		connection.query("Select * FROM " + table, function(err, data) {
 			if (err) throw err;
-			cd(data);
+			cb(data);
 		});
 	},
 	insertBurger: function(table, col, burger_name, cb) {
