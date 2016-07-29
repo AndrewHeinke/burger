@@ -10,7 +10,7 @@ router.get('/', function (req, res) {
 });
 
 router.get('/burgers', function (req, res) {
-	buger.selectAll(function (data) {
+	burger.selectAll(function (data) {
 		res.render('index', {burgers: data});
 	});
 });
@@ -23,9 +23,6 @@ router.post('/burgers/create', function (req, res) {
 
 router.put('/burgers/update/:id', function (req, res) {
 	var condition = 'id = ' + req.params.id;
-
-	console.log('condition', condition);
-
 	burger.updateBurger({'devoured' : 1}, condition, function(data) {
 		res.redirect('/burgers');
 	});

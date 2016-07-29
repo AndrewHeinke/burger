@@ -1,0 +1,13 @@
+body {
+  background-color: #48befe;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+}
+
+#burgerLogo {
+  width: 50%;
+}
+
+button {
+  margin-top: 10px;
+}
