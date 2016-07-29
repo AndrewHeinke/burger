@@ -9,7 +9,7 @@ var orm = {
 		});
 	},
 	insertBurger: function(table, col, burger_name, cb) {
-		connection.query("INSERT INTO " + table + "(" + col + ")" + "VALUES (?)", [burger_name], function(err, data) {
+		connection.query("INSERT INTO " + table + "(" + col + ")" + "VALUES (?)", burger_name, function(err, data) {
 			if (err) throw err;
 			cb(data);
 		});

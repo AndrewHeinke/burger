@@ -42,7 +42,7 @@
       <h2>Devoured Burgers</h2>
       <ul>
         {{#each burgers}}
-          {{if this.devoured}}
+          {{#this.devoured}}
             <li class="text-center" id="devouredBurgers">{{this.burger_name}}</li>
           {{/if}}
         {{/each}}
