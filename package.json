@@ -1,5 +1,5 @@
 {
-  "name": "eat_burgers",
+  "name": "burger",
   "version": "1.0.0",
   "description": "A burger logger with MySQL, Node, Express, Handlebars and a homemade ORM",
   "main": "server.js",
@@ -26,8 +26,9 @@
     "method-override": "^2.3.6",
     "mysql": "^2.11.1"
   },
-   "engines": {
-   "node": "6.2.2",
-   "npm": "3.8.6"
- }
+  "engines": {
+   "node": "6.2.2",
+   "npm": "3.8.6"
+ }
+
 }
