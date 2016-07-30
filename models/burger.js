@@ -8,13 +8,13 @@ var burger = {
 	},
 
 	insertOne: function (col, burger_name, cb) {
-		orm.insertOne('burgers', cols, vals, function (data) {
+		orm.insertOne('burgers', col, burger_name, function (data) {
 			cb(data);
 		});
 	},
 
 	updateOne: function (col, burger_id, cb) {
-		orm.updateOne('burgers', burger_id, function (data) {
+		orm.updateOne('burgers', col, burger_id, function (data) {
 			cb(data);
 		});
 	}

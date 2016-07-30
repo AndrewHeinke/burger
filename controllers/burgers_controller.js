@@ -1,8 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var app = express();
-var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
 var burger = require('../models/burger.js');
 
 router.get('/', function (req, res) {
@@ -16,16 +13,19 @@ router.get('/burgers', function (req, res) {
 });
 
 router.post('/burgers/create', function (req, res) {
-	burger.insertOne(['burger_name', 'devoured'], [req.body.name, 0], function() {
+	burger.insertOne('burger_name', req.body.name, function() {
 		res.redirect('/burgers');
 	});
 });
 
-router.put('/burgers/update/:id', function (req, res) {
-	var condition = 'id = ' + req.params.id;
-	burger.updateOne({'devoured' : 1}, condition, function(data) {
+router.put('/burgers/update/devour/:id', function (req, res) {
+	burger.updateOne('devoured', req.params.id, function() {
 		res.redirect('/burgers');
 	});
+});
+
+router.use(function (req, res) {
+	res.redirect('/burgers');
 });
 
 module.exports = router;
