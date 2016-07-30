@@ -11,19 +11,19 @@ router.get('/', function (req, res) {
 
 router.get('/burgers', function (req, res) {
 	burger.selectAll(function (data) {
-		res.render('index', {burgers: data});
+		res.render('index', {burgers : data});
 	});
 });
 
 router.post('/burgers/create', function (req, res) {
-	burger.insertBurger(['burger_name', 'devoured'], [req.body.name, 0], function(data) {
+	burger.insertOne(['burger_name', 'devoured'], [req.body.name, 0], function() {
 		res.redirect('/burgers');
 	});
 });
 
 router.put('/burgers/update/:id', function (req, res) {
 	var condition = 'id = ' + req.params.id;
-	burger.updateBurger({'devoured' : 1}, condition, function(data) {
+	burger.updateOne({'devoured' : 1}, condition, function(data) {
 		res.redirect('/burgers');
 	});
 });
