@@ -3,10 +3,10 @@ var mysql = require('mysql');
 // jawsDB connection
 var connection = mysql.createConnection({
 	port: 3306,
-	host: 'izm96dhhnwr2ieg0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-	user: 'nbi0twjkzqrmccj1',
-	password: 'tqhd5qyoo78rdtlt',
-	database: 'f2ogomvr39hea64m'
+	host: 'nj5rh9gto1v5n05t.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+	user: 'ikqehy6o67haaavo',
+	password: 'ot8tp65udmkzvth3',
+	database: 'zxniez1wi416zzo9'
 });
 
 // local connection
