@@ -3,11 +3,44 @@ body {
   color: #fff;
   font-family: 'Lato', sans-serif;
 }
-
+p {
+  margin: 0 0 3px;
+}
+row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.container-fluid {
+  margin-left: 25px;
+  margin-right: 25px;
+}
 #burgerLogo {
-  width: 50%;
+  width: 25%;
+  margin-top: 20px;
+}
+.the-devoured {
+  font-size: 1.25em;
+}
+button {
+  margin-top: 3px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #f1c40f;
+  border-color: #f1c40f;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 44px;
+  display: inline-block;
 }
 
-button {
-  margin-top: 10px;
+.divide {
+  border: 1px solid white;
+  margin: 10px 0;
+}
+
+.menuItem {
+  font-size: 1.5em;
+  line-height: 1.5;
 }
