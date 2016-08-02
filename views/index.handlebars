@@ -37,17 +37,20 @@
       </ul>
     </div>
   </div>
-
-  <div class="row">
-    <div class="col-sm-6 col-xs-12">
-      <h1>Make Your Own!</h1>
-      <form class="form-inline" action="burgers/create" method="POST">
-        <div class="form-group">
-          <label for="ca"><h4>Name a Burger:</h4></label>
-          <input type="text" id="ca" name="name" class="form-control" required>
-        </div>
-        <button class="btn btn-primary" type="submit">Make Burger!</button>
-      </form>
-  </div>
-  </div>
+</div>
+<div class="make-burger-wrapper">
+<div class="container-fluid">
+<div class="row">
+  <div class="col-xs-12 make-burger">
+    <h1>Make Your Own!</h1>
+    <form class="form-inline" action="burgers/create" method="POST">
+      <div class="form-group">
+        <input type="text" id="burgerInput" name="name" class="form-control" placeholder="Type the name of your burger..." required>
+      </div>
+      <button class="btn btn-primary" type="submit">Make Burger!</button>
+    </form>
+</div>
+</div>
+</div>
+</div>
 </div>
